@@ -1,0 +1,72 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,lightning:availableForFlowScreens" access="global" >
+    <aura:attribute name="generalObservations" type="String"/>
+    <img src="{!$Resource.damagedPlane}" usemap="#image-map" style="z-index: 0; position: relative; min-width: 510px"/>  
+    <div style="poaition: relative">
+        <div id="container" style="position:absolute">
+            <div onclick="{!c.hideSelf}" id="plane-body-top-overlay" aura:id="plane-body-top-overlay" class="damagedArea1 slds-hide"></div>  
+            <div onclick="{!c.hideSelf}" id="plane-topwing-top-overlay" aura:id="plane-topwing-top-overlay" class="damagedArea1 slds-hide" />     
+            <div onclick="{!c.hideSelf}" id="plane-bottomwing-top-overlay" aura:id="plane-bottomwing-top-overlay" class="damagedArea1 slds-hide"/>     
+            <div onclick="{!c.hideSelf}" id="plane-topturbine-top-overlay" aura:id="plane-topturbine-top-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 191px; bottom: 178px; width: 37px; height: 15px" /> 
+            <div onclick="{!c.hideSelf}" id="plane-bottomturbine-top-overlay" aura:id="plane-bottomturbine-top-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 192px; bottom: 138px; width: 35px; height: 15px" />     
+            <div onclick="{!c.hideSelf}" id="plane-righttail-top-overlay" aura:id="plane-righttail-top-overlay" class="damagedArea1 slds-hide" />     
+            <div onclick="{!c.hideSelf}" id="plane-lefttail-top-overlay" aura:id="plane-lefttail-top-overlay" class="damagedArea1 slds-hide cursorPointer" />     
+            <div onclick="{!c.hideSelf}" id="plane-cockpit-front-overlay" aura:id="plane-cockpit-front-overlay" class="damagedArea slds-hide cursorPointer" />     
+            <div onclick="{!c.hideSelf}" id="plane-leftwing-front-overlay" aura:id="plane-leftwing-front-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 375px; bottom: 224px ; width: 90px; height: 6px" />     
+            <div onclick="{!c.hideSelf}" id="plane-rightwing-front-overlay" aura:id="plane-rightwing-front-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 259px; bottom: 224px ; width: 90px; height: 6px" />     
+            <div onclick="{!c.hideSelf}" id="plane-leftturbine-front-overlay" aura:id="plane-leftturbine-front-overlay" class="damagedArea slds-hide cursorPointer"/>     
+            <div onclick="{!c.hideSelf}" id="plane-topturbine-front-overlay" aura:id="plane-topturbine-front-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 355px; bottom: 256px; width: 13px; height: 9px" />     
+            <div onclick="{!c.hideSelf}" id="plane-rightturbine-front-overlay" aura:id="plane-rightturbine-front-overlay" class="damagedArea slds-hide cursorPointer" />     
+            <div onclick="{!c.hideSelf}" id="plane-horizontalfin-front-overlay" aura:id="plane-horizontalfin-front-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 317px; bottom: 261px; width: 91px; height: 6px" />     
+            <div onclick="{!c.hideSelf}" id="plane-verticalfin-front-overlay" aura:id="plane-verticalfin-front-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 357px; bottom: 267px; width: 8px; height: 28px" />     
+            <div onclick="{!c.hideSelf}" id="plane-landinggrear-front-overlay" aura:id="plane-landinggrear-front-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 332px; bottom: 211px; width: 60px; height: 8px" />     
+            <div onclick="{!c.hideSelf}" id="plane-body-side-overlay" aura:id="plane-body-side-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 227px; bottom: 55px; width: 216px; height: 31px" />     
+            <div onclick="{!c.hideSelf}" id="plane-bottomfin-side-overlay" aura:id="plane-bottomfin-side-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 368px; bottom: 85px; width: 65px; height: 12px" />     
+            <div onclick="{!c.hideSelf}" id="plane-topfin-side-overlay" aura:id="plane-topfin-side-overlay" class="damagedArea slds-hide cursorPointer" style="position: absolute; left: 403px; bottom: 97px; width: 40px; height: 31px" />               
+            <map name="image-map">      
+                <area class="" target="_self" id="plane-body-top" onclick="{!c.indicate}" alt="plane-body-top" title="plane-body-top"   coords="53,133,228,158" shape="rect" />  
+                
+                <area class="" target="_self" id="plane-topwing-top" onclick="{!c.indicate}" alt="plane-topwing-top" title="plane-topwing-top"   coords="140,131,204,36" shape="rect"/>
+                
+                <area class="" target="_self" id="plane-bottomwing-top" onclick="{!c.indicate}" alt="plane-bottomwing-top" title="plane-bottomwing-top"   coords="141,160,205,251" shape="rect"/>
+                
+                <area target="_self" id="plane-topturbine-top" onclick="{!c.indicate}" alt="plane-topturbine-top" title="plane-topturbine-top"   coords="192,118,228,132" shape="rect"/>
+                
+                <area target="_self" id="plane-bottomturbine-top" onclick="{!c.indicate}" alt="plane-bottomturbine-top" title="plane-bottomturbine-top"   coords="227,158,192,173" shape="rect"/>
+                
+                <area target="_self" id="plane-righttail-top" onclick="{!c.indicate}" alt="plane-righttail-top" title="plane-righttail-top"   coords="233,143,276,105" shape="rect"/>
+                
+                <area target="_self" id="plane-lefttail-top" onclick="{!c.indicate}" alt="plane-lefttail-top" title="plane-lefttail-top"   coords="233,150,272,186" shape="rect"/>
+                
+                <area target="_self" id="plane-cockpit-front" onclick="{!c.indicate}" alt="plane-cockpit-front" title="plane-cockpit-front"   coords="347,58,376,83" shape="rect"/>
+                
+                <area target="_self" id="plane-leftwing-front" onclick="{!c.indicate}" alt="plane-leftwing-front" title="plane-leftwing-front"   coords=" 378,78,471,88" shape="rect"/>
+                
+                <area target="_self" id="plane-rightwing-front" onclick="{!c.indicate}" alt="plane-rightwing-front" title="plane-rightwing-front"   coords="345,81,255,87" shape="rect"/>
+                
+                <area target="_self" id="plane-leftturbine-front" onclick="{!c.indicate}" alt="plane-leftturbine-front" title="plane-leftturbine-front"   coords="334,58,345,70" shape="rect"/>
+                
+                <area target="_self" id="plane-topturbine-front" onclick="{!c.indicate}" alt="plane-topturbine-front" title="plane-topturbine-front"   coords="358,47,366,53" shape="rect"/>
+                
+                <area target="_self" id="plane-rightturbine-front" onclick="{!c.indicate}" alt="plane-rightturbine-front" title="plane-rightturbine-front"   coords="376,60,386,69" shape="rect"/>
+                
+                <area target="_self" id="plane-horizontalfin-front" onclick="{!c.indicate}"  alt="plane-horizontalfin-front" title="plane-horizontalfin-front"   coords="317,40,408,46" shape="rect"/>
+                
+                <area target="_self" id="plane-verticalfin-front" onclick="{!c.indicate}"  alt="plane-verticalfin-front" title="plane-verticalfin-front"   coords="357,13,365,41" shape="rect"/>
+                
+                <area target="_self" id="plane-landinggrear-front" onclick="{!c.indicate}" alt="plane-landinggrear-front" title="plane-landinggrear-front"   coords="332,91,392,99" shape="rect"/>
+                
+                <area target="_self" id="plane-body-side" onclick="{!c.indicate}" alt="plane-body-side" title="plane-body-side"   coords="438,222,222,253" shape="rect"/>
+                
+                <area target="_self" id="plane-bottomfin-side" onclick="{!c.indicate}" alt="plane-bottomfin-side" title="plane-bottomfin-side"   coords="368,211,433,223" shape="rect"/>
+                
+                <area target="_self" id="plane-topfin-side" onclick="{!c.indicate}" alt="plane-topfin-side" title="plane-topfin-side"   coords="444,181,404,212" shape="rect"/>
+                
+            </map>      
+        </div>
+		<div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control">
+                <ui:inputTextArea label="General Observations" rows="3" value="{!v.generalObservations}"/>
+            </div>
+        </div>             
+    </div>           
+</aura:component>

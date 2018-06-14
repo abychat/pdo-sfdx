@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#33A8DC</headerColor>
+        <logo>Screen_Shot_20180316_at_100541_AM</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Manage the inspection process of planes going into service.</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Inspections</label>
+    <navType>Standard</navType>
+    <tabs>Inspections_Home</tabs>
+    <tabs>Plane__c</tabs>
+    <tabs>standard-OtherUserProfile</tabs>
+    <tabs>Maintenance_Check__c</tabs>
+    <tabs>Supplier__c</tabs>
+    <tabs>Booking__c</tabs>
+    <tabs>Certification__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Inspections_UtilityBar</utilityBar>
+</CustomApplication>

@@ -1,0 +1,61 @@
+<aura:component access="global" implements="lightning:availableForFlowScreens,force:lightningQuickAction" >
+	<aura:attribute name="newMaintCheck" type="Maintenance_Check__c"/>
+    <aura:attribute name="aircraftPapersCheck" type="Boolean"/>
+    <aura:attribute name="aircraftPapersUncheck" type="Boolean"/>
+    <aura:attribute name="landingGearCheck" type="Boolean"/>
+    <aura:attribute name="landingGearUncheck" type="Boolean"/>
+    <aura:attribute name="wingsCheck" type="Boolean"/>
+    <aura:attribute name="wingsUncheck" type="Boolean"/>
+    <aura:attribute name="bodyDamageCheck" type="Boolean"/>
+    <aura:attribute name="bodyDamageUncheck" type="Boolean"/>
+    <aura:attribute name="generalObservations" type="String"/>
+    <aura:attribute name="showFileUpload" type="Boolean" default="false"/>
+    <div class="slds-form slds-form_stacked">
+        <div class="slds-text-heading_small slds-text-align_center">Papers and External Checks</div>
+        <div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control">
+                <label class="slds-form-element__label" for="aircraftPapersCheck">
+                  <span class="slds-slider-label">
+                    <span class="slds-slider-label__label">All Aircraft papers and manuals available as per FAA regulations?</span>
+                  </span>
+                </label>
+                <lightning:buttonIconStateful aura:id='aircraftPapersUncheck' class="checkBoxAlign" iconName="utility:dislike" selected="{!v.aircraftPapersUncheck}" alternativeText="Problem" onclick="{! c.handleToggle }"/>
+                <lightning:buttonIconStateful aura:id='aircraftPapersCheck' class="checkBoxAlign rightAlign" iconName="utility:like" selected="{!v.aircraftPapersCheck}" alternativeText="OK" onclick="{! c.handleToggle }"/>
+            </div>
+        </div>
+        <div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control">
+                <label class="slds-form-element__label" for="landingGearCheck">
+                  <span class="slds-slider-label">
+                    <span class="slds-slider-label__label">Landing gear check - gear struts, attachments, torque links and bolts</span>
+                  </span>
+                </label>
+                <lightning:buttonIconStateful aura:id='landingGearUncheck' class="checkBoxAlign" iconName="utility:dislike" selected="{!v.landingGearUncheck}" alternativeText="Problem" onclick="{! c.handleToggle }"/>
+                <lightning:buttonIconStateful aura:id='landingGearCheck' class="checkBoxAlign rightAlign" iconName="utility:like" selected="{!v.landingGearCheck}" alternativeText="OK" onclick="{! c.handleToggle }"/>            
+            </div>
+        </div>
+        <div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control">
+                <label class="slds-form-element__label" for="wingsCheck">
+                  <span class="slds-slider-label">
+                    <span class="slds-slider-label__label">Wings check - check surface, skins and tips for damage and loose rivets</span>
+                  </span>
+                </label>
+                <lightning:buttonIconStateful aura:id='wingsUncheck' class="checkBoxAlign" iconName="utility:dislike" selected="{!v.wingsUncheck}" alternativeText="Problem" onclick="{! c.handleToggle }"/>
+                <lightning:buttonIconStateful aura:id='wingsCheck' class="checkBoxAlign rightAlign" iconName="utility:like" selected="{!v.wingsCheck}" alternativeText="OK" onclick="{! c.handleToggle }"/>            
+            </div>
+        </div>
+        <div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control bottomSpace">
+                 <label class="slds-form-element__label" for="bodyDamageCheck">
+                  <span class="slds-slider-label">
+                    <span class="slds-slider-label__label">External Body Damage Check - check fuselage for any unexpected damages</span>
+                  </span>
+                </label>
+                <lightning:buttonIconStateful aura:id='bodyDamageUncheck' class="checkBoxAlign" iconName="utility:dislike" selected="{!v.bodyDamageUncheck}" alternativeText="Problem" onclick="{! c.handleToggle }"/>
+                <lightning:buttonIconStateful aura:id='bodyDamageCheck' class="checkBoxAlign rightAlign" iconName="utility:like" selected="{!v.bodyDamageCheck}" alternativeText="OK" onclick="{! c.handleToggle }"/>                
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,159 @@
+.THIS {
+    margin-bottom: .5rem;
+}
+
+.THIS .damagedArea{
+    opacity: 0.5;
+    background: red;
+    height: 100px;
+    width: 500px;
+    position: absolute;
+    z-index: 100;
+    
+}
+.THIS .damagedArea1{
+    position: absolute;
+    opacity: .5;
+    cursor:pointer
+}
+
+.THIS #plane-bottomwing-top-overlay{
+    left: 125px;
+    bottom: 50px;
+    width: 0;
+    height: 0;
+    border-top: 101px solid red;
+    border-left: 65px solid transparent;
+    border-right: 18px solid red;
+}
+
+.THIS #plane-topwing-top-overlay{
+    left: 124px;
+    bottom: 185px;
+    width: 0;
+    height: 0;
+    border-bottom: 101px solid red;
+    border-left: 65px solid transparent;
+    border-right: 18px solid red;
+}
+
+.THIS #plane-body-top-overlay{
+	bottom: 160px;
+    left: 69px;
+    width: 161px;
+    height: 26px;
+    background: red;
+}
+
+.THIS #plane-body-top-overlay:after{
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid red;
+    border-bottom: 13px solid transparent;
+}
+
+.THIS #plane-bottomwing-top-overlay{
+
+}
+
+.THIS #plane-topturbine-top-overlay{
+
+}
+
+.THIS #plane-bottomturbine-top-overlay{
+
+}
+
+.THIS #plane-righttail-top-overlay{
+    left: 223px;
+    bottom: 170px;
+    width: 0;
+    height: 0;
+    border-bottom: 46px solid red;
+    border-left: 33px solid transparent;
+    border-right: 18px solid red;
+}
+
+.THIS #plane-lefttail-top-overlay{
+    left: 223px;
+    bottom: 120px;
+    width: 0;
+    height: 0;
+    border-top: 46px solid red;
+    border-left: 33px solid transparent;
+    border-right: 18px solid red;
+}
+
+.THIS #plane-cockpit-front-overlay{
+    position: absolute;
+    left: 346px;
+    bottom: 230px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.THIS #plane-leftwing-front-overlay{
+
+}
+
+.THIS #plane-rightwing-front-overlay{
+
+}
+
+.THIS #plane-leftturbine-front-overlay{
+    left: 332px;
+    bottom: 240px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.THIS #plane-topturbine-front-overlay{
+
+}
+
+.THIS #plane-rightturbine-front-overlay{
+    left: 375px;
+    bottom: 240px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.THIS #plane-horizontalfin-front-overlay{
+
+}
+
+.THIS #plane-verticalfin-front-overlay{
+
+}
+
+.THIS #plane-landinggrear-front-overlay{
+
+}
+
+.THIS #plane-body-side-overlay{
+
+}
+
+.THIS #plane-bottomfin-side-overlay{
+
+}
+
+.THIS #plane-topfin-side-overlay{
+
+}
+
+
+.THIS #container{
+    z-index: 0;
+}
+.THIS area{
+    display: block;
+}

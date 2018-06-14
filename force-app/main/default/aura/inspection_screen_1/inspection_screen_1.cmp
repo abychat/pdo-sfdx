@@ -1,0 +1,64 @@
+<aura:component access="global" implements="lightning:availableForFlowScreens,force:lightningQuickActionWithoutHeader" controller="InspectionFlowMethods">
+    <aura:attribute name="fields_to_query" type="String" default="Name,Flight_Hours__c,Last_Maintenance_Check__c,Mileage__c,Next_Flight__c,Previous_Flight__c"/>
+    <aura:attribute name="dataError" type="String"/>
+    <aura:attribute name="planeId" type="String"/>
+    <aura:attribute name="planeName" type="String"/>
+    <aura:attribute name="lastInspection" type="DateTime"/>
+    <aura:attribute name="lastMileage" type="String"/>
+    <aura:attribute name="flightHours" type="String"/>
+    <aura:attribute name="previousFlight" type="DateTime"/>
+    <aura:attribute name="nextFlight" type="DateTime"/>
+    <aura:attribute name="newMaintCheck" type="Maintenance_Check__c"/>
+    <aura:attribute name="fuelLevel" default="25" type="String" />
+    <aura:attribute name="newMileage" type="String" />
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> -->
+    
+
+    
+    
+    
+    <div class="slds-form slds-form_stacked">
+        <div class="slds-text-heading_small slds-text-align_center">Plane Summary</div>
+        <div class="bottomSpace topSpace">
+            <img src="{!$Resource.plane_picture}" alt="Plane Image"/>
+        </div>
+        <dl class="slds-list_horizontal slds-wrap slds-p-top_medium slds-box">
+            <dt class="slds-item_label slds-text-color_weak" title="First Label">Plane Name</dt>
+            <dd class="slds-item_detail slds-truncate" title="Description for first label">{!v.planeName}</dd>
+            <dt class="slds-item_label slds-text-color_weak" title="Second Label">Last Inspection</dt>
+            <dd class="slds-item_detail slds-truncate" title="Description for second label">
+                <ui:outputDateTime value="{!v.lastInspection}"/>    
+            </dd>
+            <dt class="slds-item_label slds-text-color_weak" title="Second Label">Flight Hours</dt>
+            <dd class="slds-item_detail slds-truncate" title="Description for second label">{!v.flightHours}</dd>
+            <dt class="slds-item_label slds-text-color_weak " title="Second Label">Previous Flight</dt>
+            <dd class="slds-item_detail slds-truncate" title="Description for second label">
+                <ui:outputDateTime value="{!v.previousFlight}"/>
+            </dd>
+            <dt class="slds-item_label slds-text-color_weak" title="Second Label">Next Flight</dt>
+            <dd class="slds-item_detail slds-truncate" title="Description for second label">
+                <ui:outputDateTime value="{!v.nextFlight}"/>
+            </dd>
+            <dt class="slds-item_label slds-text-color_weak" title="Second Label">Last Mileage Reading</dt>
+            <dd class="slds-item_detail slds-truncate" title="Description for second label">{!v.lastMileage}</dd>
+        </dl>
+        
+        
+        <div class="slds-form-element slds-p-top_medium">
+            <label class="slds-form-element__label" for="newMileage">New Mileage</label>
+            <div class="slds-form-element__control">
+                <ui:inputText value="{!v.newMileage}"/> <br/>
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="fuelSlider">
+                <span class="slds-slider-label">
+                    <span class="slds-slider-label__label">Fuel Level(%)</span>
+                </span>
+            </label>
+            <div class="slds-form-element__control">
+                <lightning:slider step="25" min="0" max="100" value="{!v.fuelLevel}" onchange="{!c.handleRangeChange}"/>
+            </div>
+        </div>
+    </div>
+</aura:component>

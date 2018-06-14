@@ -1,0 +1,12 @@
+<design:component >
+	<design:attribute name="newMaintCheck" label="New Maintenance Check" />
+    <design:attribute name="planeName" label="Plane Name"/>
+    <design:attribute name="lastInspection" label="Last Inspection"/>
+    <design:attribute name="lastMileage" label="Last Mileage"/>
+    <design:attribute name="flightHours" label="Flight Hours"/>
+    <design:attribute name="previousFlight" label="Previous Flight"/>
+    <design:attribute name="nextFlight" label="Next Flight"/>
+	<design:attribute name="planeId" label="Plane Id"/>
+    <design:attribute name="fuelLevel" label="Fuel Level"/>
+    <design:attribute name="newMileage" label="New Mileage"/>
+</design:component>

@@ -1,0 +1,36 @@
+<aura:component controller="cdg_objectImagePaneController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName">
+    <aura:attribute name="baseURL" type="string" default="" />
+    <aura:attribute name="hasImage" type="boolean" default="false" />
+    <aura:attribute name="imageTitle" type="string" default="Record Image"/>
+    <aura:attribute name="imageURL" type="string" default="" />
+    <aura:attribute name="filename" type="string" default="image" />
+    <aura:attribute name="maxWidth" type="integer" default="80" />
+    <aura:attribute name="maxHeight" type="integer" default="250" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:renderIf isTrue="{!v.hasImage}">
+        <lightning:card title="{!v.imageTitle}">
+            <aura:set attribute="actions">
+                <lightning:button label="Update Photo" class="imageBtn" onclick="{!c.changeImageHandler}"/>
+            </aura:set>
+            <div class="imageCard">
+                <img src="{!v.imageURL}" id="recordImage" style="{!'max-width:' + v.maxWidth + '%;max-height:' + v.maxHeight + 'px;'}"/>
+                
+            </div>
+        </lightning:card>
+        <aura:set attribute="else">
+            <lightning:card title="Upload Image">
+                <div class="imageCard">
+                    <lightning:fileUpload label="Upload Image"
+                        name="imageUploader"
+                        multiple="false"
+                        recordId="{!v.recordId}"
+                        onuploadfinished="{!c.handleImageUpload}"/> 
+                </div>
+            </lightning:card>
+                
+        </aura:set>
+    </aura:renderIf>
+            
+    <!-- need to add logic to standardize name, check for existing image file, 
+        convert h/w to auto-values and hide/show accordingly -->
+</aura:component>

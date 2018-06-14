@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Flight_Layout</fullName>
+    <fields>Plane__c</fields>
+    <fields>Name</fields>
+    <fields>Destination_Airport__c</fields>
+    <fields>Source_Airport__c</fields>
+    <fields>Departure_Time__c</fields>
+    <fields>Expected_Arrival_Time__c</fields>
+    <fields>Status__c</fields>
+    <label>New Flight Layout</label>
+</CompactLayout>

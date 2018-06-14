@@ -1,0 +1,12 @@
+.THIS .checkBoxAlign{
+  display: inline-block;
+  float: right;
+}
+
+.THIS .rightAlign{
+  margin-right: 5px;
+}
+
+.THIS .bottomSpace{
+    margin-bottom:5px;
+}

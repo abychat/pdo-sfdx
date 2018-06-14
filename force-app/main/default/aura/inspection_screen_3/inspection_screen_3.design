@@ -1,0 +1,12 @@
+<design:component >
+    <design:attribute name="newMaintCheck" label="New Maintenance "/>
+    <design:attribute name="propellerCracks" label="Propeller Crack "/>
+    <design:attribute name="propellerRotation" label="Propeller Rotation "/>
+    <design:attribute name="engineOilLevel" label="Engine Oil Level"/>
+    <design:attribute name="oilFilter" label="Oil Filter"/>
+    <design:attribute name="engineObservations" label="Engine Observations"/>
+    <design:attribute name="propellerCheck" label="Propeller Crack Check"/>
+    <design:attribute name="propellerRotationCheck" label="Propeller Rotation Check"/>
+    <design:attribute name="engineOilLevelCheck" label="Engine Oil Level Check"/>
+    <design:attribute name="oilFilterCheck" label="Oil Filter Check"/>
+</design:component>

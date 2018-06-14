@@ -1,0 +1,6 @@
+<design:component label="Object Image Pane">
+        <design:attribute name="imageTitle" label="Component Label" default="Record Image" description="What do you want as the title header for this component?" />
+        <design:attribute name="filename" label="Image File Name" default="recImage" description="What do you want as the unique filename for the record image?" />
+        <design:attribute name="maxWidth" label="Image Maximum Width" default="80" description="The max width (in % of total space) of the image - defaults to 80" />
+        <design:attribute name="maxHeight" label="Image Maximum Height" default="250" description="The max height (in pixels) of the image - defaults to 250" />
+</design:component>

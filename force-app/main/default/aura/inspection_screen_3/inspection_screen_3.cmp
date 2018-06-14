@@ -1,0 +1,69 @@
+<aura:component access="global" implements="lightning:availableForFlowScreens,force:lightningQuickAction" >
+	<aura:attribute name="newMaintCheck" type="Maintenance_Check__c"/>
+    <aura:attribute name="propellerCracks" type="Boolean"/>
+    <aura:attribute name="propellerCheck" type="Boolean"/>
+    <aura:attribute name="propellerUncheck" type="Boolean"/>
+    <aura:attribute name="propellerRotation" type="Boolean"/>
+    <aura:attribute name="propellerRotationCheck" type="Boolean"/>
+    <aura:attribute name="propellerRotationUncheck" type="Boolean"/>
+    <aura:attribute name="engineOilLevel" type="Boolean"/>
+    <aura:attribute name="engineOilLevelCheck" type="Boolean"/>
+    <aura:attribute name="engineOilLevelUncheck" type="Boolean"/>
+    <aura:attribute name="oilFilter" type="Boolean"/>
+     <aura:attribute name="oilFilterCheck" type="Boolean"/>
+     <aura:attribute name="oilFilterUncheck" type="Boolean"/>
+    <aura:attribute name="engineObservations" type="String"/>
+    <div class="slds-form slds-form_stacked">
+        <div class="slds-text-heading_small slds-text-align_center">Propeller and Engine Check</div>
+        <div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control">
+                <label class="slds-form-element__label" for="aircraftPapersCheck">
+                  <span class="slds-slider-label">
+                    <span class="slds-slider-label__label">Check propellers for nicks and cracks</span>
+                  </span>
+                </label>
+                <lightning:buttonIconStateful aura:id='propellerUncheck' class="checkBoxAlign" iconName="utility:dislike" selected="{!v.propellerUncheck}" alternativeText="Problem" onclick="{! c.handleToggle }"/>
+                <lightning:buttonIconStateful aura:id='propellerCheck' class="checkBoxAlign rightAlign" iconName="utility:like" selected="{!v.propellerCheck}" alternativeText="OK" onclick="{! c.handleToggle }"/>
+            </div>
+        </div>
+        <div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control">
+                <label class="slds-form-element__label" for="aircraftPapersCheck">
+                  <span class="slds-slider-label">
+                    <span class="slds-slider-label__label">Rotate blades and check for smoothness</span>
+                  </span>
+                </label>
+                <lightning:buttonIconStateful aura:id='propellerRotationUncheck' class="checkBoxAlign" iconName="utility:dislike" selected="{!v.propellerRotationUncheck}" alternativeText="Problem" onclick="{! c.handleToggle }"/>
+                <lightning:buttonIconStateful aura:id='propellerRotationCheck' class="checkBoxAlign rightAlign" iconName="utility:like" selected="{!v.propellerRotationCheck}" alternativeText="OK" onclick="{! c.handleToggle }"/>
+            </div>
+        </div>
+        <div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control">
+                <label class="slds-form-element__label" for="aircraftPapersCheck">
+                  <span class="slds-slider-label">
+                    <span class="slds-slider-label__label">Check engine oil levels</span>
+                  </span>
+                </label>
+                <lightning:buttonIconStateful aura:id='engineOilLevelUncheck' class="checkBoxAlign" iconName="utility:dislike" selected="{!v.engineOilLevelUncheck}" alternativeText="Problem" onclick="{! c.handleToggle }"/>
+                <lightning:buttonIconStateful aura:id='engineOilLevelCheck' class="checkBoxAlign rightAlign" iconName="utility:like" selected="{!v.engineOilLevelCheck}" alternativeText="OK" onclick="{! c.handleToggle }"/>
+            </div>
+        </div>
+        <div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control">
+                <label class="slds-form-element__label" for="aircraftPapersCheck">
+                  <span class="slds-slider-label">
+                    <span class="slds-slider-label__label">Check full flow oil filter elements</span>
+                  </span>
+                </label>
+                <lightning:buttonIconStateful aura:id='oilFilterUncheck' class="checkBoxAlign" iconName="utility:dislike" selected="{!v.oilFilterUncheck}" alternativeText="Problem" onclick="{! c.handleToggle }"/>
+                <lightning:buttonIconStateful aura:id='oilFilterCheck' class="checkBoxAlign rightAlign" iconName="utility:like" selected="{!v.oilFilterCheck}" alternativeText="OK" onclick="{! c.handleToggle }"/>
+            </div>
+        </div>
+        <div class="slds-form-element slds-p-top_small">
+            <div class="slds-form-element__control">
+                <ui:inputTextArea label="Propeller and Enginer Observations" rows="3" value="{!v.engineObservations}"/>
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

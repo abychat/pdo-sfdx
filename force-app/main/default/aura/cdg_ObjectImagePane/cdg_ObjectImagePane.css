@@ -1,0 +1,14 @@
+.THIS {
+}
+
+.THIS .imageCard{
+    text-align:center;
+}
+
+.THIS .imageBtn{
+}
+
+.THIS #recordImage{
+    max-width:80%;
+    max-height:250px;
+}

@@ -1,0 +1,9 @@
+<design:component >
+    <design:attribute name="newMaintCheck" label="New Maintenance Check"/>
+    <design:attribute name="aircraftPapersCheck" label="Aircraft papers check"/>
+    <design:attribute name="landingGearCheck" label="Landing gear check"/>
+    <design:attribute name="wingsCheck" label="Wings check"/>
+    <design:attribute name="bodyDamageCheck" label="Body damage check"/>
+    <design:attribute name="generalObservations" label="General Observations"/>
+    <design:attribute name="showFileUpload" label="Show File Upload Component?"/>
+</design:component>

@@ -1,0 +1,8 @@
+.THIS .checkBoxAlign{
+  display: inline-block;
+  float: right;
+}
+
+.THIS .rightAlign{
+  margin-right: 5px;
+}
